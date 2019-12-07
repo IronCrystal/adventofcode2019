@@ -25,21 +25,6 @@ function _adjacentDigits(x) {
   // return number[0] === number[1] || number[1] === number[2] || number[2] === number[3] || number[3] === number[4] || number[4] === number[5];
 }
 
-function _noMoreThanDouble(x) {
-  let number = x.toString().split('').map(val => val = parseInt(val));
-  let isValid = true;
-  number.forEach(function(val) {
-    let count = 0;
-    number.forEach(function(val2) {
-      if (val === val2) {
-        count++;
-        if (count > 2) isValid = false;
-      }
-    })
-  })
-  return isValid;
-}
-
 function increase(x) {
   if (x % 10 === 9) {
     //The number is about to be increased, but a zero is going to be less than the tens digit.
